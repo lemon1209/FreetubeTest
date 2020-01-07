@@ -1,0 +1,348 @@
+/*
+    This file is part of FreeTube.
+
+    FreeTube is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    FreeTube is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with FreeTube.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 6px;
+    background: #262626;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #424242;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #262626;
+}
+
+body {
+    background-color: #212121;
+}
+
+input[type=text] {
+    color: #EEEEEE;
+}
+
+.sk-cube-grid .sk-cube {
+    background-color: #f44336;
+}
+
+.select-text {
+    border-bottom: 1px solid #E0E0E0;
+    color: white;
+}
+
+.select-text option {
+    color: black;
+}
+
+.select-text:focus {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.select:after {
+    border-top: 6px solid #E0E0E0;
+}
+
+.select-label {
+    color: #F5F5F5;
+}
+
+.searchBar ::-webkit-input-placeholder {
+    color: #E0E0E0;
+}
+
+.searchSuggestions {
+    background-color: #424242;
+    color: white;
+}
+
+.searchSuggestions p:hover {
+    background-color: #262626;
+}
+
+.topNav {
+    background-color: #262626;
+    -webkit-box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+    color: #f44336;
+}
+
+.searchBar input {
+    border-bottom: 1px solid #ddd;
+}
+
+.searchButton {
+    color: #E0E0E0;
+}
+
+.filterButton {
+    color: #E0E0E0;
+}
+
+#searchFilter {
+    background-color: #424242;
+}
+
+.jumpToInput {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.settingsSlider span {
+    color: white;
+}
+
+.card {
+    background-color: #424242;
+}
+
+.message {
+    color: #757575;
+}
+
+.videoDelete {
+    color: white;
+}
+
+.channelViewContainer {
+    background-color: #424242;
+}
+
+.channelViewImage {
+    border: 0px solid white;
+}
+
+.channelViewName {
+    color: #EEEEEE;
+}
+
+.channelViewSubs {
+    color: #BDBDBD;
+}
+
+.channelViewDescription {
+    color: #E0E0E0;
+}
+
+.channelSubButton {
+    color: #E0E0E0;
+    background-color: #f44336;
+}
+
+.channelTabOption:hover {
+    background-color: #262626;
+}
+
+.videoTitle {
+    color: #EEEEEE;
+}
+
+.channelName {
+    color: #E0E0E0;
+}
+
+.videoDescription {
+    color: #E0E0E0;
+}
+
+.statistics {
+    background-color: #424242;
+    color: #EEEEEE;
+}
+
+.views {
+    color: #E0E0E0;
+}
+
+.details {
+    background-color: #424242;
+    color: #EEEEEE;
+}
+
+.playerSubButton {
+    color: #E0E0E0;
+    background-color: #f44336;
+}
+
+.smallButton {
+    color: #E0E0E0;
+    background-color: #757575;
+}
+
+.recommendDate {
+    color: #E0E0E0;
+}
+
+.qualityTypes {
+    color: #E0E0E0;
+    background-color: #757575;
+}
+
+.speedTypes {
+    color: #E0E0E0;
+    background-color: #757575;
+}
+
+.shareTypes {
+    color: #E0E0E0;
+    background-color: #757575;
+}
+
+.unsaved {
+    color: #E0E0E0;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    background-color: #f44336;
+}
+
+.videoOptions ul {
+    background-color: #262626;
+    color: white;
+}
+
+.videoOptions li:hover {
+    background-color: #262626;
+}
+
+.videoOptions a {
+    color: white;
+}
+
+.playlistVideoOptions ul {
+    background-color: #262626;
+    color: white;
+}
+
+.playlistVideoOptions li:hover {
+    background-color: #262626;
+}
+
+.playlistVideoOptions a {
+    color: white;
+}
+
+.profile:hover {
+    background-color: #616161;
+}
+
+.profileEditSelected {
+    background-color: #424242;
+}
+
+.profileSelectSettings {
+    background-color: #9E9E9E;
+}
+
+.profileEditPadding:hover {
+    background-color: #616161;
+}
+
+#main {
+    color: #EEEEEE;
+}
+
+#main hr {
+    border-bottom: 1px solid #212121;
+}
+
+#subscriptions img {
+    border: 0px solid white;
+}
+
+#sideNav {
+    background-color: #262626;
+    color: #E0E0E0;
+    -webkit-box-shadow: 4px -2px 51px -6px rgba(0, 0, 0, 0.75);
+}
+
+#sideNav hr {
+    background-color: #f44336;
+}
+
+#sideNav li:hover {
+    background-color: #212121;
+}
+
+#backButton {
+    color: white;
+}
+
+#channelIcon {
+    border: 0px solid white;
+}
+
+#channelName {
+    color: #E0E0E0;
+}
+
+#publishDate {
+    color: #E0E0E0;
+}
+
+#description {
+    color: #E0E0E0;
+}
+
+#showComments {
+    background-color: #757575;
+    color: #E0E0E0;
+}
+
+#recommendations {
+    color: #EEEEEE;
+}
+
+#videoListContainer {
+    color: #EEEEEE;
+}
+
+#toast {
+    background-color: #616161;
+    color: white;
+}
+
+#confirmFunction {
+    background-color: #616161;
+    color: white;
+}
+
+#getNextPage {
+    background-color: #616161
+}
+
+#comments {
+    background-color: #424242;
+}
+
+#miniPL {
+    background-color: #424242;
+}
+
+#profileSelect {
+    background-color: #424242;
+    color: white;
+}
+
+#profileSelectHeader span:hover {
+    background-color: #616161;
+}

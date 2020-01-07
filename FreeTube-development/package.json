@@ -1,0 +1,105 @@
+{
+    "name": "FreeTube",
+    "productName": "FreeTube",
+    "version": "0.7.2",
+    "description": "An Open Source YouTube app for privacy.",
+    "main": "src/js/init.js",
+    "scripts": {
+        "pack": "electron-builder build --dir",
+        "start": "electron .",
+        "make:all": "npm run make:linux:x64 && npm run make:linux:arm && npm run make:mac:zip && npm run make:win",
+        "make:win": "electron-builder build --win",
+        "make:win:exe": "electron-builder build --win nsis",
+        "make:win:zip": "electron-builder build --win zip",
+        "make:win:portable": "electron-builder build --win portable --x64 ",
+        "make:mac:zip": "electron-builder build --mac zip",
+        "make:mac:dmg": "electron-builder build --mac dmg",
+        "make:linux:x64": "electron-builder build --linux --x64",
+        "make:linux:x64:deb": "electron-builder build --linux deb --x64",
+        "make:linux:x64:rpm": "electron-builder build --linux rpm --x64",
+        "make:linux:x64:pac": "electron-builder build --linux pacman --x64",
+        "make:linux:x64:appimage": "electron-builder build --linux appimage --x64",
+        "make:linux:x64:zip": "electron-builder build --linux zip --x64",
+        "make:linux:x64:tar": "electron-builder build --linux tar.xz --x64",
+        "make:linux:arm": "electron-builder build --linux --arm64",
+        "make:linux:arm:deb": "electron-builder build --linux deb --arm64",
+        "make:linux:arm:rpm": "electron-builder build --linux rpm --arm64",
+        "make:linux:arm:pac": "electron-builder build --linux pacman --arm64",
+        "make:linux:arm:zip": "electron-builder build --linux zip --arm64",
+        "make:linux:arm:tar.xz": "electron-builder build --linux tar.xz --arm64",
+        "dist": "build"
+    },
+    "keywords": [],
+    "author": {
+        "name": "PrestonN",
+        "email": "FreeTubeApp@protonmail.com",
+        "url": "https://github.com/FreeTubeApp/FreeTube"
+    },
+    "license": "GPL-3.0-or-later",
+    "build": {
+        "appId": "io.freetubeapp.freetube",
+        "asar": true,
+        "protocols": [
+            {
+                "name": "FreeTube",
+                "schemes": [
+                    "freetube"
+                ]
+            }
+        ],
+        "mac": {
+            "category": "public.app-category.video",
+            "icon": "src/icons/iconColor.icns",
+            "target": [
+                "zip"
+            ]
+        },
+        "win": {
+            "target": [
+                "nsis",
+                "zip"
+            ],
+            "icon": "src/icons/iconColor.ico"
+        },
+        "linux": {
+            "protocols": {
+                "name": "FreeTube",
+                "schemes": [
+                    "freetube"
+                ]
+            },
+            "target": [
+                "AppImage",
+                "deb",
+                "rpm",
+                "zip",
+                "tar.xz"
+            ],
+            "desktop": {
+                "Icon": "freetube"
+            },
+            "category": "Network"
+        }
+    },
+    "devDependencies": {
+        "electron": "^6.0.12",
+        "electron-builder": "^21.2.0",
+        "electron-compile": "^6.4.4",
+        "electron-installer-appimage": "^1.0.1",
+        "electron-packager": "^14.0.6",
+        "electron-winstaller": "^4.0.0"
+    },
+    "dependencies": {
+        "autolinker": "^3.11.1",
+        "commonjs": "0.0.1",
+        "dateformat": "^3.0.3",
+        "electron-context-menu": "^0.15.0",
+        "jquery": "^3.4.1",
+        "jsdom": "^15.2.0",
+        "mustache": "^3.1.0",
+        "nedb": "^1.8.0",
+        "opml-to-json": "0.0.3",
+        "vue": "^2.6.10",
+        "ytdl-core": "^1.0.3"
+    }
+}

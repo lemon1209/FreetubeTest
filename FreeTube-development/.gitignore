@@ -1,0 +1,12 @@
+node_modules
+out
+\.idea/
+subscriptions\.db
+.vscode/
+.eslintrc*
+*.db
+*.code-workspace
+
+electron-packager/win32-x64/FreeTube-win32-x64/
+
+dist/

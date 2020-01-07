@@ -1,0 +1,77 @@
+<!--
+    This file is part of FreeTube.
+
+    FreeTube is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    FreeTube is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with FreeTube.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<style>
+body {
+    background-color: #424242;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+#legacyPlayer {
+    width: 100%;
+}
+
+</style>
+<link rel="stylesheet" href="../style/mediaelementplayer.css" />
+<link rel="stylesheet" href="../js/plugins/quality/quality.min.css" />
+<link rel="stylesheet" href="../js/plugins/loop/loop.css" />
+<link rel="stylesheet" href="../js/plugins/speed/speed.css" />
+<link rel="stylesheet" href="../js/plugins/context-menu/context-menu.css" />
+<link rel="stylesheet" href="../js/plugins/title/title.css" />
+<div id='miniPlayer'>
+    <div v-if='playerSeen && !legacySeen' class='videoPlayer'>
+        <video id='player' onmousemove="hideMouseTimeout()" onmouseleave="removeMouseTimeout()" :poster="videoThumbnail">
+            <source v-if='validDash' data-quality='Auto' type="application/dash+xml" :src="videoDash" />
+            <source v-if='validLive' data-quality='Live' type="application/x-mpegURL" :src="videoLive" />
+            <span v-html="subtitleHtml"></span>
+            <track kind="metadata" srclang='' class="time-rail-thumbnails" :src="'https://invidio.us/api/v1/storyboards/' + videoId + '?height=90'">
+            </track>
+        </video>
+    </div>
+    <div v-else-if='!playerSeen && legacySeen'>
+        <video id='legacyPlayer' class='videoPlayer' onloadstart='checkLegacySettings()' onmousemove="hideMouseTimeout()" onmouseleave="removeMouseTimeout()" :poster="videoThumbnail" :src='videoUrl' controls="controls" v-html="subtitleHtml">
+        </video>
+    </div>
+    <div v-else>
+        <span v-html="embededHtml"></span>
+    </div>
+</div>
+<script>
+window.$ = window.jQuery = require('jquery');
+
+</script>
+<script src="../js/dash.all.min.js"></script>
+<script src="../js/mediaelement-and-player.js"></script>
+<script src="../js/plugins/quality/quality.js"></script>
+<script src="../js/plugins/quality/quality-i18n.js"></script>
+<script src="../js/plugins/speed/speed.js"></script>
+<script src="../js/plugins/speed/speed-i18n.js"></script>
+<script src="../js/plugins/loop/loop.js"></script>
+<script src="../js/plugins/loop/loop-i18n.js"></script>
+<script src="../js/plugins/title/title.js"></script>
+<script src="../js/plugins/context-menu/context-menu.js"></script>
+<script src="../js/plugins/context-menu/context-menu-i18n.js"></script>
+<script src="../js/plugins/timerailthumbnails/vtt.min.js"></script>
+<script src="../js/plugins/timerailthumbnails/mep-feature-time-rail-thumbnails.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/general.js"></script>
+<script src="../js/miniPlayer.js"></script>
+<script src="../js/events.js"></script>
+<script src="../js/history.js"></script>
