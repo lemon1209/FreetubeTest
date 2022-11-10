@@ -82,7 +82,7 @@
         }
     },
     "devDependencies": {
-        "electron": "^6.0.12",
+        "electron": "^18.3.7",
         "electron-builder": "^21.2.0",
         "electron-compile": "^6.4.4",
         "electron-installer-appimage": "^1.0.1",
